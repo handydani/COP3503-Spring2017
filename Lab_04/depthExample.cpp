@@ -1,23 +1,17 @@
 #include <iostream>
+#include "pa3.h"
+#include <fstream>
+#include <string>
+#include <stack>
 #include <vector>
 
-class SimpleStack {
-	int depth = 0;
-public:
-	void push() {
-		++depth;
-	}
-	int pop() {
-		return depth--;
-	}
-	int depthStack() {
-		return depth;
-	}
-};
 
-class stack {
+class DepthStack
+{
 	std::vector<std::string> vect;
 public:
+  DepthStack();
+
 	void push(std::string data)
 	{
 		vect.push_back(data);
@@ -31,13 +25,14 @@ public:
 		std::string data = vect.back();
 		return data;
 	}
-	int depthOfStack()
+	int size()
 	{
 		return vect.size();
 	}
 };
 
+int main()
+{
 
-int main() {
-	return 0;
+  return 0;
 }
